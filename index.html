@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Loading, please wait...</p>
+    <script>
+        document.write('Hello, world!');
+        console.log('Hello, developers!');
+        
+        let n = Math.floor(Math.random() * 1000);
+        console.log('Рандомное число от 0 до 1000:', n);
+
+        while(true) {           
+
+            let guessN = prompt('Введите число от 0 до 1000, q - выход:');
+            console.log('Пользователь ввел:', +guessN);
+
+            if (guessN === 'q') {
+                alert('Очень жаль, что вы не хотите доиграть!');
+                break;
+            }
+
+            if (isNaN(guessN)) {
+                alert('Вы ввели не число!');
+            } else if (+guessN >= 1000) {
+                alert('Число не входит в диапазон от 0 до 1000');
+            } else if (+guessN < 0) {
+                alert('Число не входит в диапазон от 0 до 1000');
+            } else if (+guessN > n) {
+                alert('Вы не угадали число!');
+            } else if (+guessN < n) {
+                alert('Вы не угадали число!');
+            } else if (+guessN == n) {
+                alert('Вы угадали число!');
+                break;
+            }
+             
+        }
+    </script>
+</body>
+</html>
